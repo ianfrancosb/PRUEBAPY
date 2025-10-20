@@ -6,7 +6,7 @@ pipeline {
         stage('Preparar entorno') { 
             steps { 
                 echo "Creando entorno virtual..." 
-                bat '"C:/Users/BRAYAN XD/OneDrive/Escritorio/CLASES/EJERCICIOS LIBRES/python/Scripts/python.exe" -m venv venv' 
+                bat '"C:/Users/BRAYAN XD/AppData/Local/Programs/Python/Python313/python.exe" -m venv venv'
                 bat 'venv/Scripts/activate && pip install -r requirements.txt' 
             } 
         } 
