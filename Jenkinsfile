@@ -1,4 +1,3 @@
-
 pipeline { 
     agent any 
 
@@ -6,15 +5,24 @@ pipeline {
         stage('Preparar entorno') { 
             steps { 
                 echo "Creando entorno virtual..." 
+                // Crear entorno virtual
                 bat '"C:/Users/BRAYAN XD/AppData/Local/Programs/Python/Python313/python.exe" -m venv venv'
-                bat 'venv/Scripts/activate && pip install -r requirements.txt' 
+                
+                // Instalar dependencias dentro del entorno
+                bat '''
+                call venv\\Scripts\\activate.bat
+                pip install -r requirements.txt
+                '''
             } 
         } 
 
         stage('Ejecutar script') { 
             steps { 
                 echo "Ejecutando script principal..." 
-                bat 'venv/Scripts/activate && python src/hello.py' 
+                bat '''
+                call venv\\Scripts\\activate.bat
+                python src/hello.py
+                '''
             } 
         } 
     } 
