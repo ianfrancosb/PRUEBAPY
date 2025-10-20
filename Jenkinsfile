@@ -6,15 +6,15 @@ pipeline {
         stage('Preparar entorno') { 
             steps { 
                 echo "Creando entorno virtual..." 
-                bat '"C:\Users\BRAYAN XD\OneDrive\Escritorio\CLASES\EJERCICIOS LIBRES}\python\Scripts\python.exe" -m venv venv' 
-                bat 'venv\\Scripts\\activate && pip install -r requirements.txt' 
+                bat '"C:/Users/BRAYAN XD/OneDrive/Escritorio/CLASES/EJERCICIOS LIBRES/python/Scripts/python.exe" -m venv venv' 
+                bat 'venv/Scripts/activate && pip install -r requirements.txt' 
             } 
         } 
 
         stage('Ejecutar script') { 
             steps { 
                 echo "Ejecutando script principal..." 
-                bat 'venv\\Scripts\\activate && python hola.py' 
+                bat 'venv/Scripts/activate && python src/hello.py' 
             } 
         } 
     } 
