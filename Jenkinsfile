@@ -21,7 +21,7 @@ pipeline {
                 echo "Ejecutando script principal..." 
                 bat '''
                 call venv\\Scripts\\activate.bat
-                python src/hello.py
+                python /hello.py
                 '''
             } 
         } 
