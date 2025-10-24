@@ -14,6 +14,6 @@ def generar_reporte():
         f.write(f"Total de clientes: {total_clientes}\n")
         f.write(f"Promedio de edad: {promedio_edad:.1f}\n")
         f.write(f"Monto mensual total: S/. {total_monto:.2f}\n")
-    print("✅ Reporte generado con éxito.")
+    print("Reporte generado con éxito.")
 if __name__ == "__main__":
     generar_reporte()
