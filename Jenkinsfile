@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        EMAIL_RECIPIENTS = "tu_correo@mapfre.com, otro@correo.com"
+        EMAIL_RECIPIENTS = "ianfrancosb2017@gmail.com, otro@correo.com"
     }
     stages {
         stage('Preparar entorno') {
